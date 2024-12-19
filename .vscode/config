@@ -1,0 +1,6 @@
+firmware_debug = dist_env.PhonyTarget(
+    "debug",
+    "${GDBPYCOM}",
+    source=dist_env["FW_ELF"],
+    GDBOPTS="${GDBOPTS_BASE}",
+    GDBREMOTE="${OPENOCD_GDB_PIPE}",
